@@ -75,7 +75,7 @@
 ### ```GET http://127.0.0.1:8000/api/rooms/?ordering=-date_start (обратная сортировка по времени)```
 ### ```DELETE http://127.0.0.1:8000/api/rooms/1/ удаление записи по id=1```
 
-## Rooms
+## Bookings
 
 ### ```GET http://127.0.0.1:8000/api/bookings/```
 ```
