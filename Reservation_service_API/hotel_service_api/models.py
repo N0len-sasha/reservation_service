@@ -24,7 +24,7 @@ class Reservation(models.Model):
     hotel_id = models.ForeignKey(
         Room,
         on_delete=models.CASCADE,
-        related_name='recipes',
+        related_name='bookings',
         verbose_name='Номер'
     )
     date_start = models.DateField(
