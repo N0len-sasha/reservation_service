@@ -15,15 +15,15 @@
 ``` 
   poetry install
 ``` 
-### Выполнить миграции и загрузить данные
+### Выполнить миграции
+```
+  cd Reservation_service_API
+```
 ``` 
   python manage.py migrate 
 ```
  
 ### Запустить проект 
-```
-  cd Reservation_service_API
-```
 ``` 
   python manage.py runserver 
 ``` 
