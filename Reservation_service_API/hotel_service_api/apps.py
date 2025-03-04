@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class HotelServiceApiConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'hotel_service_api'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "hotel_service_api"
