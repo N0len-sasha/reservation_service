@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('hotel_service_api', '0001_initial'),
+        ("hotel_service_api", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='reservation',
-            name='date_start',
-            field=models.DateField(verbose_name='Дата начала брони'),
+            model_name="reservation",
+            name="date_start",
+            field=models.DateField(verbose_name="Дата начала брони"),
         ),
     ]

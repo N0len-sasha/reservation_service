@@ -5,37 +5,67 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Room',
+            name="Room",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('price', models.FloatField(verbose_name='Цена за ночь')),
-                ('description', models.TextField(verbose_name='Описание')),
-                ('create_date', models.DateField(auto_now_add=True, verbose_name='Дата добавления')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("price", models.FloatField(verbose_name="Цена за ночь")),
+                ("description", models.TextField(verbose_name="Описание")),
+                (
+                    "create_date",
+                    models.DateField(auto_now_add=True, verbose_name="Дата добавления"),
+                ),
             ],
             options={
-                'verbose_name': 'Номер',
-                'verbose_name_plural': 'Номера',
+                "verbose_name": "Номер",
+                "verbose_name_plural": "Номера",
             },
         ),
         migrations.CreateModel(
-            name='Reservation',
+            name="Reservation",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('date_start', models.DateField(auto_now_add=True, verbose_name='Дата начала брони')),
-                ('date_end', models.DateField(verbose_name='Дата окончания брони')),
-                ('hotel_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='recipes', to='hotel_service_api.room', verbose_name='Номер')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "date_start",
+                    models.DateField(
+                        auto_now_add=True, verbose_name="Дата начала брони"
+                    ),
+                ),
+                ("date_end", models.DateField(verbose_name="Дата окончания брони")),
+                (
+                    "hotel_id",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="recipes",
+                        to="hotel_service_api.room",
+                        verbose_name="Номер",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Бронь',
-                'verbose_name_plural': 'Брони',
+                "verbose_name": "Бронь",
+                "verbose_name_plural": "Брони",
             },
         ),
     ]
