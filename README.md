@@ -8,24 +8,12 @@
   cd reservation_service
 ``` 
 
-### Установить зависимости 
-``` 
-  pip install poetry 
-``` 
-``` 
-  poetry install
-``` 
-### Выполнить миграции и загрузить данные
-``` 
-  python manage.py migrate 
+### Выполнить миграции и запустить проект 
 ```
- 
-### Запустить проект 
-```
-  cd Reservation_service_API
+  docker-compose up --build
 ```
 ``` 
-  python manage.py runserver 
+  docker-compose exec web python manage.py migrate
 ``` 
 
 # Основные запросы
